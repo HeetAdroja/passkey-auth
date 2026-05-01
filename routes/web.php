@@ -11,6 +11,10 @@ use App\Http\Controllers\PasskeyController;
 
 // Guest routes
 Route::middleware('guest')->group(function () {
+    Route::get('/', function () {
+        return view('welcome');
+    })->name('welcome');
+
     Route::get('/register', [RegisterController::class, 'showForm'])->name('register');
     Route::post('/register', [RegisterController::class, 'register']);
 

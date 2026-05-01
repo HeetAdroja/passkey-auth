@@ -36,7 +36,6 @@ class PasskeyController extends Controller
 
         session()->put('passkey-registration-options', $options);
 
-
         return response()->json(json_decode($options, true));
     }
 
